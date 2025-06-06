@@ -73,18 +73,18 @@
 
       <h4>STEP 01 – Validar envio de beacon ao carregar um placement</h4>
       <pre>
-Dado que estou em uma tela que contém um placement publicitário
-Quando a tela é carregada
-E o placement torna-se visível ao usuário
-Então um beacon de carregamento é enviado para esse placement
+<strong>Dado</strong> que estou em uma tela que contém um placement publicitário
+<strong>Quando</strong> a tela é carregada
+<strong>E</strong> o placement torna-se visível ao usuário
+<strong>Então</strong> um beacon de carregamento é enviado para esse placement
       </pre>
 
       <h4>STEP 02 – Validar que beacon é enviado uma única vez por carregamento</h4>
       <pre>
-Dado que o placement foi carregado e o beacon já foi enviado
-Quando o usuário rola a tela para fora do componente
-E retorna para a posição original
-Então o beacon não é reenviado, a menos que o componente seja recarregado
+<strong>Dado</strong> que o placement foi carregado e o beacon já foi enviado
+<strong>Quando</strong> o usuário rola a tela para fora do componente
+<strong>E</strong> retorna para a posição original
+<strong>Então</strong> o beacon não é reenviado, a menos que o componente seja recarregado
       </pre>
 
       <h4>STEP 03 – Validar envio de beacon para múltiplos placements</h4>
@@ -110,18 +110,18 @@ Então um beacon de carregamento é enviado para cada placement visível
 
       <h4>STEP 01 – Validar envio correto do beacon com base na regra IAB</h4>
       <pre>
-Dado que um anúncio está carregado e posicionado na tela
-Quando 50% ou mais da área do anúncio fica visível
-E essa condição é mantida por pelo menos 1 segundo
-Então um beacon de visualização é enviado conforme especificado
+<strong>Dado</strong> que um anúncio está carregado e posicionado na tela
+<strong>Quando</strong> 50% ou mais da área do anúncio fica visível
+<strong>E</strong> essa condição é mantida por pelo menos 1 segundo
+<strong>Então</strong> um beacon de visualização é enviado conforme especificado
       </pre>
 
       <h4>STEP 02 – Validar que beacon não é enviado se critério IAB não for atendido</h4>
       <pre>
-Dado que um anúncio está parcialmente carregado na tela
-Quando sua visibilidade for inferior a 50%
-E o tempo de exibição for inferior a 1 segundo
-Então o beacon de visualização não é enviado
+<strong>Dado</strong> que um anúncio está parcialmente carregado na tela
+<strong>Quando</strong> sua visibilidade for inferior a 50%
+<strong>E</strong> o tempo de exibição for inferior a 1 segundo
+<strong>Então</strong> o beacon de visualização não é enviado
       </pre>
 
       <h4>STEP 03 – Validar envio de múltiplos beacons quando múltiplos anúncios atendem à regra</h4>
