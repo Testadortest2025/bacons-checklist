@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checklist de Validação - Beacons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2a7ae2;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 900px;
+      background: #fff;
+      box-shadow: 0 0 10px #ccc;
+    }
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #2a7ae2;
+      color: white;
+    }
+    input[type="text"] {
+      width: 95%;
+      padding: 6px 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .section-header {
+      background: #e3f0fd;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #0b3c91;
+    }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Checklist de Validação - Beacons de Carregamento e Visualização</h1>
+
+  <h2>🔹 Beacons de Carregamento dos Placements</h2>
+
+  <table>
+    <tr class="section-header">
+      <th>Validação</th>
+      <th>Link Evidência (Google Drive)</th>
+    </tr>
+    <tr>
+      <td>Validar que o beacon de carregamento é enviado ao exibir um placement.</td>
+      <td><a href="https://drive.google.com/file/d/19z6kyOTmxY_YEeYKyzTXgbnhwZGOREuQ/view?usp=drive_link" target="_blank">Ver evidência</a></td>
+    </tr>
+    <tr>
+      <td>Validar que o beacon é enviado apenas uma vez por carregamento, mesmo após scroll para fora e volta.</td>
+      <td><a href="https://drive.google.com/file/d/19z6kyOTmxY_YEeYKyzTXgbnhwZGOREuQ/view?usp=drive_link" target="_blank">Ver evidência</a></td>
+    </tr>
+    <tr>
+      <td>Validar envio de beacons para todos os placements visíveis na tela (múltiplos placements).</td>
+      <td><a href="https://drive.google.com/file/d/19z6kyOTmxY_YEeYKyzTXgbnhwZGOREuQ/view?usp=drive_link" target="_blank">Ver evidência</a></td>
+    </tr>
+  </table>
+
+  <h2>🔹 Beacons de Visualização (View)</h2>
+
+  <table>
+    <tr class="section-header">
+      <th>Validação</th>
+      <th>Link Evidência (Google Drive)</th>
+    </tr>
+    <tr>
+      <td>Validar envio do beacon apenas quando o anúncio estiver visível ≥50% por no mínimo 1 segundo.</td>
+      <td><a href="https://drive.google.com/file/d/19z6kyOTmxY_YEeYKyzTXgbnhwZGOREuQ/view?usp=drive_link" target="_blank">Ver evidência</a></td>
+    </tr>
+    <tr>
+      <td>Validar que o beacon não é enviado se o anúncio ficar visível menos de 50% ou por menos de 1 segundo.</td>
+      <td><a href="https://drive.google.com/file/d/19z6kyOTmxY_YEeYKyzTXgbnhwZGOREuQ/view?usp=drive_link" target="_blank">Ver evidência</a></td>
+    </tr>
+    <tr>
+      <td>Validar envio de múltiplos beacons quando múltiplos anúncios atendem ao critério de visibilidade e tempo.</td>
+      <td><a href="https://drive.google.com/file/d/19z6kyOTmxY_YEeYKyzTXgbnhwZGOREuQ/view?usp=drive_link" target="_blank">Ver evidência</a></td>
+    </tr>
+  </table>
+
+</body>
+</html>

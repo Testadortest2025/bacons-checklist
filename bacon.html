@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>✅ TEST PLAN – BEACONS DE CARREGAMENTO E VISUALIZAÇÃO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 40px;
+      color: #333;
+    }
+    .document {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: #0066cc;
+    }
+    h3 {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 20px;
+      margin-top: 0;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    pre {
+      white-space: pre-wrap;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="document">
+    <h1>✅ TEST PLAN – BEACONS DE CARREGAMENTO E VISUALIZAÇÃO</h1>
+
+    <div class="section">
+      <h2>CONTEXTO</h2>
+      <p>Garantir o envio correto dos beacons de carregamento dos placements (espaços publicitários) e dos beacons de visualização dos anúncios, seguindo as normas da IAB (50% visível por no mínimo 1 segundo).</p>
+    </div>
+
+    <div class="section">
+      <h2>🔹 ENVIO DE BEACONS DE CARREGAMENTO DOS PLACEMENTS</h2>
+
+      <h3>Tests plan/review:</h3>
+      <ul>
+        <li>Validar que o beacon de carregamento é enviado ao exibir um placement.</li>
+        <li>Validar que o beacon é enviado apenas uma vez por carregamento.</li>
+        <li>Validar envio de beacons para todos os placements visíveis na tela.</li>
+      </ul>
+
+      <h3>TEST PLAN - VALIDAÇÃO COMPONENTE</h3>
+
+      <h4>STEP 01 – Validar envio de beacon ao carregar um placement</h4>
+      <pre>
+Dado que estou em uma tela que contém um placement publicitário
+Quando a tela é carregada
+E o placement torna-se visível ao usuário
+Então um beacon de carregamento é enviado para esse placement
+      </pre>
+
+      <h4>STEP 02 – Validar que beacon é enviado uma única vez por carregamento</h4>
+      <pre>
+Dado que o placement foi carregado e o beacon já foi enviado
+Quando o usuário rola a tela para fora do componente
+E retorna para a posição original
+Então o beacon não é reenviado, a menos que o componente seja recarregado
+      </pre>
+
+      <h4>STEP 03 – Validar envio de beacon para múltiplos placements</h4>
+      <pre>
+Dado que a tela contém dois ou mais placements distintos
+Quando todos se tornam visíveis na interface
+E estão carregados corretamente no layout
+Então um beacon de carregamento é enviado para cada placement visível
+      </pre>
+    </div>
+
+    <div class="section">
+      <h2>🔹 ENVIO DOS BEACONS DE VISUALIZAÇÃO (VIEW)</h2>
+
+      <h3>Tests plan/review:</h3>
+      <ul>
+        <li>Validar envio do beacon apenas quando o anúncio estiver visível ≥50% por 1 segundo.</li>
+        <li>Validar que beacon não é enviado em caso de visibilidade inferior ou tempo insuficiente.</li>
+        <li>Validar envio de múltiplos beacons quando múltiplos anúncios cumprem o critério.</li>
+      </ul>
+
+      <h3>TEST PLAN - VALIDAÇÃO COMPONENTE</h3>
+
+      <h4>STEP 01 – Validar envio correto do beacon com base na regra IAB</h4>
+      <pre>
+Dado que um anúncio está carregado e posicionado na tela
+Quando 50% ou mais da área do anúncio fica visível
+E essa condição é mantida por pelo menos 1 segundo
+Então um beacon de visualização é enviado conforme especificado
+      </pre>
+
+      <h4>STEP 02 – Validar que beacon não é enviado se critério IAB não for atendido</h4>
+      <pre>
+Dado que um anúncio está parcialmente carregado na tela
+Quando sua visibilidade for inferior a 50%
+E o tempo de exibição for inferior a 1 segundo
+Então o beacon de visualização não é enviado
+      </pre>
+
+      <h4>STEP 03 – Validar envio de múltiplos beacons quando múltiplos anúncios atendem à regra</h4>
+      <pre>
+Dado que há dois ou mais anúncios totalmente carregados
+Quando cada anúncio fica visível ≥50% por 1 segundo
+E todos atendem simultaneamente os critérios de visualização
+Então um beacon de visualização é enviado separadamente para cada anúncio
+      </pre>
+    </div>
+  </div>
+  <a href="checklist_bacon.html" style="display: inline-block; margin-top: 30px; padding: 10px 20px; background-color: #2a7ae2; color: #fff; text-decoration: none; border-radius: 5px;">Ir para Checklist</a>
+</body>
+</html>
